@@ -1,0 +1,60 @@
+syntax="proto3";
+
+import "google/protobuf/empty.proto";
+
+package businessServiceOrder;
+option go_package=".;order";
+
+
+message BusinessServiceOrder {
+    int64 businessServiceOrderID = 1;
+    int64 clientID = 2;
+    int64 businessServiceID = 3;
+    string orderDate = 4;
+    string createdAt = 5;
+    bool prePaid = 6;
+    string clientFirstName = 7;
+    string clientPhoneNumber = 8;
+    string clientPhoneNumberPrefix = 9;
+    string clientCommentary = 10;
+}
+
+message GetBusinessServiceOrderRequest {
+    int64 businessServiceOrderID = 1;
+}
+
+message GetBusinessServiceOrderResponse {
+    BusinessServiceOrder businessServiceOrder = 1;
+}
+
+message GetBusinessServiceOrdersResponse {
+    repeated BusinessServiceOrder businessServicesOrders = 1;
+}
+
+message CreateBusinessServiceOrderRequest {
+    int64 clientID = 1;
+    int64 businessServiceID = 2;
+    string orderDate = 3;
+    bool prePaid = 4;
+    string clientFirstName = 5;
+    string clientPhoneNumber = 6;
+    string clientPhoneNumberPrefix = 7;
+    string clientCommentary = 8;
+}
+
+message CreateBusinessServiceOrderResponse {
+    BusinessServiceOrder businessServiceOrder = 1;
+}
+
+
+
+
+
+
+
+service BusinessServices {
+    rpc GetBusinessServiceOrder (GetBusinessServiceOrderRequest) returns (GetBusinessServiceOrderResponse) {}
+    rpc GetBusinessServiceOrders (google.protobuf.Empty) returns (GetBusinessServiceOrdersResponse) {}
+
+    rpc CreateBusinessServiceOrder (CreateBusinessServiceOrderRequest) returns (CreateBusinessServiceOrderResponse) {}
+}
