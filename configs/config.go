@@ -3,8 +3,8 @@ package config
 import "fmt"
 
 //postgresAddress is the address of the postgres
-//const postgresAddress = "127.0.0.1"
-const postgresAddress = "46.101.138.224"
+const postgresAddress = "127.0.0.1"
+//const postgresAddress = "46.101.138.224"
 
 //postgresPort is the port of the postgres
 const postgresPort = "5432"

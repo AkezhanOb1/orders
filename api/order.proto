@@ -52,7 +52,7 @@ message CreateBusinessServiceOrderResponse {
 
 
 
-service BusinessServices {
+service BusinessServiceOrders {
     rpc GetBusinessServiceOrder (GetBusinessServiceOrderRequest) returns (GetBusinessServiceOrderResponse) {}
     rpc GetBusinessServiceOrders (google.protobuf.Empty) returns (GetBusinessServiceOrdersResponse) {}
 
