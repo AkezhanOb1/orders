@@ -527,34 +527,34 @@ var file_order_proto_rawDesc = []byte{
 	0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73,
 	0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x14, 0x62,
 	0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72,
-	0x64, 0x65, 0x72, 0x32, 0x9f, 0x03, 0x0a, 0x10, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73,
-	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x12, 0x88, 0x01, 0x0a, 0x17, 0x47, 0x65, 0x74,
-	0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f,
-	0x72, 0x64, 0x65, 0x72, 0x12, 0x34, 0x2e, 0x62, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x42,
+	0x64, 0x65, 0x72, 0x32, 0xa4, 0x03, 0x0a, 0x15, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x12, 0x88, 0x01,
+	0x0a, 0x17, 0x47, 0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x12, 0x34, 0x2e, 0x62, 0x75, 0x73, 0x69,
+	0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72,
+	0x2e, 0x47, 0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76,
+	0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x35, 0x2e, 0x62, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65,
+	0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6c, 0x0a, 0x18, 0x47, 0x65, 0x74, 0x42,
 	0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72,
-	0x64, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x35, 0x2e, 0x62, 0x75, 0x73,
-	0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65,
-	0x72, 0x2e, 0x47, 0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x12, 0x6c, 0x0a, 0x18, 0x47, 0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65,
-	0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x12,
-	0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
-	0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x36, 0x2e, 0x62, 0x75, 0x73, 0x69, 0x6e, 0x65,
-	0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x47,
-	0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63,
-	0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x12, 0x91, 0x01, 0x0a, 0x1a, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x42, 0x75, 0x73, 0x69,
+	0x64, 0x65, 0x72, 0x73, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x36, 0x2e, 0x62,
+	0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72,
+	0x64, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53,
+	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x91, 0x01, 0x0a, 0x1a, 0x43, 0x72, 0x65, 0x61, 0x74,
+	0x65, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x4f, 0x72, 0x64, 0x65, 0x72, 0x12, 0x37, 0x2e, 0x62, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x43, 0x72, 0x65,
+	0x61, 0x74, 0x65, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x38,
+	0x2e, 0x62, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x42, 0x75, 0x73, 0x69,
 	0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72,
-	0x12, 0x37, 0x2e, 0x62, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x42, 0x75,
-	0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64,
-	0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x38, 0x2e, 0x62, 0x75, 0x73, 0x69,
-	0x6e, 0x65, 0x73, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72,
-	0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x53,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a, 0x07, 0x2e, 0x3b, 0x6f, 0x72, 0x64, 0x65, 0x72,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a, 0x07, 0x2e, 0x3b,
+	0x6f, 0x72, 0x64, 0x65, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -583,12 +583,12 @@ var file_order_proto_depIdxs = []int32{
 	0, // 0: businessServiceOrder.GetBusinessServiceOrderResponse.businessServiceOrder:type_name -> businessServiceOrder.BusinessServiceOrder
 	0, // 1: businessServiceOrder.GetBusinessServiceOrdersResponse.businessServicesOrders:type_name -> businessServiceOrder.BusinessServiceOrder
 	0, // 2: businessServiceOrder.CreateBusinessServiceOrderResponse.businessServiceOrder:type_name -> businessServiceOrder.BusinessServiceOrder
-	1, // 3: businessServiceOrder.BusinessServices.GetBusinessServiceOrder:input_type -> businessServiceOrder.GetBusinessServiceOrderRequest
-	6, // 4: businessServiceOrder.BusinessServices.GetBusinessServiceOrders:input_type -> google.protobuf.Empty
-	4, // 5: businessServiceOrder.BusinessServices.CreateBusinessServiceOrder:input_type -> businessServiceOrder.CreateBusinessServiceOrderRequest
-	2, // 6: businessServiceOrder.BusinessServices.GetBusinessServiceOrder:output_type -> businessServiceOrder.GetBusinessServiceOrderResponse
-	3, // 7: businessServiceOrder.BusinessServices.GetBusinessServiceOrders:output_type -> businessServiceOrder.GetBusinessServiceOrdersResponse
-	5, // 8: businessServiceOrder.BusinessServices.CreateBusinessServiceOrder:output_type -> businessServiceOrder.CreateBusinessServiceOrderResponse
+	1, // 3: businessServiceOrder.BusinessServiceOrders.GetBusinessServiceOrder:input_type -> businessServiceOrder.GetBusinessServiceOrderRequest
+	6, // 4: businessServiceOrder.BusinessServiceOrders.GetBusinessServiceOrders:input_type -> google.protobuf.Empty
+	4, // 5: businessServiceOrder.BusinessServiceOrders.CreateBusinessServiceOrder:input_type -> businessServiceOrder.CreateBusinessServiceOrderRequest
+	2, // 6: businessServiceOrder.BusinessServiceOrders.GetBusinessServiceOrder:output_type -> businessServiceOrder.GetBusinessServiceOrderResponse
+	3, // 7: businessServiceOrder.BusinessServiceOrders.GetBusinessServiceOrders:output_type -> businessServiceOrder.GetBusinessServiceOrdersResponse
+	5, // 8: businessServiceOrder.BusinessServiceOrders.CreateBusinessServiceOrder:output_type -> businessServiceOrder.CreateBusinessServiceOrderResponse
 	6, // [6:9] is the sub-list for method output_type
 	3, // [3:6] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
@@ -703,144 +703,144 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// BusinessServicesClient is the client API for BusinessServices service.
+// BusinessServiceOrdersClient is the client API for BusinessServiceOrders service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type BusinessServicesClient interface {
+type BusinessServiceOrdersClient interface {
 	GetBusinessServiceOrder(ctx context.Context, in *GetBusinessServiceOrderRequest, opts ...grpc.CallOption) (*GetBusinessServiceOrderResponse, error)
 	GetBusinessServiceOrders(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetBusinessServiceOrdersResponse, error)
 	CreateBusinessServiceOrder(ctx context.Context, in *CreateBusinessServiceOrderRequest, opts ...grpc.CallOption) (*CreateBusinessServiceOrderResponse, error)
 }
 
-type businessServicesClient struct {
+type businessServiceOrdersClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewBusinessServicesClient(cc grpc.ClientConnInterface) BusinessServicesClient {
-	return &businessServicesClient{cc}
+func NewBusinessServiceOrdersClient(cc grpc.ClientConnInterface) BusinessServiceOrdersClient {
+	return &businessServiceOrdersClient{cc}
 }
 
-func (c *businessServicesClient) GetBusinessServiceOrder(ctx context.Context, in *GetBusinessServiceOrderRequest, opts ...grpc.CallOption) (*GetBusinessServiceOrderResponse, error) {
+func (c *businessServiceOrdersClient) GetBusinessServiceOrder(ctx context.Context, in *GetBusinessServiceOrderRequest, opts ...grpc.CallOption) (*GetBusinessServiceOrderResponse, error) {
 	out := new(GetBusinessServiceOrderResponse)
-	err := c.cc.Invoke(ctx, "/businessServiceOrder.BusinessServices/GetBusinessServiceOrder", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/businessServiceOrder.BusinessServiceOrders/GetBusinessServiceOrder", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *businessServicesClient) GetBusinessServiceOrders(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetBusinessServiceOrdersResponse, error) {
+func (c *businessServiceOrdersClient) GetBusinessServiceOrders(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetBusinessServiceOrdersResponse, error) {
 	out := new(GetBusinessServiceOrdersResponse)
-	err := c.cc.Invoke(ctx, "/businessServiceOrder.BusinessServices/GetBusinessServiceOrders", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/businessServiceOrder.BusinessServiceOrders/GetBusinessServiceOrders", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *businessServicesClient) CreateBusinessServiceOrder(ctx context.Context, in *CreateBusinessServiceOrderRequest, opts ...grpc.CallOption) (*CreateBusinessServiceOrderResponse, error) {
+func (c *businessServiceOrdersClient) CreateBusinessServiceOrder(ctx context.Context, in *CreateBusinessServiceOrderRequest, opts ...grpc.CallOption) (*CreateBusinessServiceOrderResponse, error) {
 	out := new(CreateBusinessServiceOrderResponse)
-	err := c.cc.Invoke(ctx, "/businessServiceOrder.BusinessServices/CreateBusinessServiceOrder", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/businessServiceOrder.BusinessServiceOrders/CreateBusinessServiceOrder", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// BusinessServicesServer is the server API for BusinessServices service.
-type BusinessServicesServer interface {
+// BusinessServiceOrdersServer is the server API for BusinessServiceOrders service.
+type BusinessServiceOrdersServer interface {
 	GetBusinessServiceOrder(context.Context, *GetBusinessServiceOrderRequest) (*GetBusinessServiceOrderResponse, error)
 	GetBusinessServiceOrders(context.Context, *empty.Empty) (*GetBusinessServiceOrdersResponse, error)
 	CreateBusinessServiceOrder(context.Context, *CreateBusinessServiceOrderRequest) (*CreateBusinessServiceOrderResponse, error)
 }
 
-// UnimplementedBusinessServicesServer can be embedded to have forward compatible implementations.
-type UnimplementedBusinessServicesServer struct {
+// UnimplementedBusinessServiceOrdersServer can be embedded to have forward compatible implementations.
+type UnimplementedBusinessServiceOrdersServer struct {
 }
 
-func (*UnimplementedBusinessServicesServer) GetBusinessServiceOrder(context.Context, *GetBusinessServiceOrderRequest) (*GetBusinessServiceOrderResponse, error) {
+func (*UnimplementedBusinessServiceOrdersServer) GetBusinessServiceOrder(context.Context, *GetBusinessServiceOrderRequest) (*GetBusinessServiceOrderResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBusinessServiceOrder not implemented")
 }
-func (*UnimplementedBusinessServicesServer) GetBusinessServiceOrders(context.Context, *empty.Empty) (*GetBusinessServiceOrdersResponse, error) {
+func (*UnimplementedBusinessServiceOrdersServer) GetBusinessServiceOrders(context.Context, *empty.Empty) (*GetBusinessServiceOrdersResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBusinessServiceOrders not implemented")
 }
-func (*UnimplementedBusinessServicesServer) CreateBusinessServiceOrder(context.Context, *CreateBusinessServiceOrderRequest) (*CreateBusinessServiceOrderResponse, error) {
+func (*UnimplementedBusinessServiceOrdersServer) CreateBusinessServiceOrder(context.Context, *CreateBusinessServiceOrderRequest) (*CreateBusinessServiceOrderResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateBusinessServiceOrder not implemented")
 }
 
-func RegisterBusinessServicesServer(s *grpc.Server, srv BusinessServicesServer) {
-	s.RegisterService(&_BusinessServices_serviceDesc, srv)
+func RegisterBusinessServiceOrdersServer(s *grpc.Server, srv BusinessServiceOrdersServer) {
+	s.RegisterService(&_BusinessServiceOrders_serviceDesc, srv)
 }
 
-func _BusinessServices_GetBusinessServiceOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BusinessServiceOrders_GetBusinessServiceOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetBusinessServiceOrderRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(BusinessServicesServer).GetBusinessServiceOrder(ctx, in)
+		return srv.(BusinessServiceOrdersServer).GetBusinessServiceOrder(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/businessServiceOrder.BusinessServices/GetBusinessServiceOrder",
+		FullMethod: "/businessServiceOrder.BusinessServiceOrders/GetBusinessServiceOrder",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BusinessServicesServer).GetBusinessServiceOrder(ctx, req.(*GetBusinessServiceOrderRequest))
+		return srv.(BusinessServiceOrdersServer).GetBusinessServiceOrder(ctx, req.(*GetBusinessServiceOrderRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BusinessServices_GetBusinessServiceOrders_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BusinessServiceOrders_GetBusinessServiceOrders_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(BusinessServicesServer).GetBusinessServiceOrders(ctx, in)
+		return srv.(BusinessServiceOrdersServer).GetBusinessServiceOrders(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/businessServiceOrder.BusinessServices/GetBusinessServiceOrders",
+		FullMethod: "/businessServiceOrder.BusinessServiceOrders/GetBusinessServiceOrders",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BusinessServicesServer).GetBusinessServiceOrders(ctx, req.(*empty.Empty))
+		return srv.(BusinessServiceOrdersServer).GetBusinessServiceOrders(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BusinessServices_CreateBusinessServiceOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BusinessServiceOrders_CreateBusinessServiceOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateBusinessServiceOrderRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(BusinessServicesServer).CreateBusinessServiceOrder(ctx, in)
+		return srv.(BusinessServiceOrdersServer).CreateBusinessServiceOrder(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/businessServiceOrder.BusinessServices/CreateBusinessServiceOrder",
+		FullMethod: "/businessServiceOrder.BusinessServiceOrders/CreateBusinessServiceOrder",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BusinessServicesServer).CreateBusinessServiceOrder(ctx, req.(*CreateBusinessServiceOrderRequest))
+		return srv.(BusinessServiceOrdersServer).CreateBusinessServiceOrder(ctx, req.(*CreateBusinessServiceOrderRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _BusinessServices_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "businessServiceOrder.BusinessServices",
-	HandlerType: (*BusinessServicesServer)(nil),
+var _BusinessServiceOrders_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "businessServiceOrder.BusinessServiceOrders",
+	HandlerType: (*BusinessServiceOrdersServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetBusinessServiceOrder",
-			Handler:    _BusinessServices_GetBusinessServiceOrder_Handler,
+			Handler:    _BusinessServiceOrders_GetBusinessServiceOrder_Handler,
 		},
 		{
 			MethodName: "GetBusinessServiceOrders",
-			Handler:    _BusinessServices_GetBusinessServiceOrders_Handler,
+			Handler:    _BusinessServiceOrders_GetBusinessServiceOrders_Handler,
 		},
 		{
 			MethodName: "CreateBusinessServiceOrder",
-			Handler:    _BusinessServices_CreateBusinessServiceOrder_Handler,
+			Handler:    _BusinessServiceOrders_CreateBusinessServiceOrder_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
