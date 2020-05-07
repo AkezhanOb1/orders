@@ -19,7 +19,7 @@ func main() {
 	log.Printf("Server is listening on %v ...", address)
 
 	s := grpc.NewServer()
-	pb.RegisterBusinessServicesServer(s, &services.BusinessServiceOrder{})
+	pb.RegisterBusinessServiceOrdersServer(s, &services.BusinessServiceOrder{})
 	err = s.Serve(lis)
 	if err != nil {
 		panic(err)
