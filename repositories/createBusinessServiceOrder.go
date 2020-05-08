@@ -18,7 +18,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 	defer conn.Close(context.Background())
 
 
-	sqlQuery := `INSERT INTO business_company_service_order (client_id, business_service_id, order_date, pre_paid, created_at, 
+	sqlQuery := `INSERT INTO business_company_service_order (client_id, business_service_id, start_at, pre_paid, created_at, 
      					client_first_name, client_phone_number, client_phone_number_prefix, client_commentary) 
 				 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) 
 				 RETURNING id;`
@@ -27,7 +27,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 	var businessServiceOrderID int64
 	clientID := request.GetClientID()
 	businessServiceID := request.GetBusinessServiceID()
-	orderDate := request.GetOrderDate()
+	startAt := request.GetStartAt()
 	prePaid := request.GetPrePaid()
 	createdAt := time.Now().Format(time.RFC3339)
 	clientFirstName := request.GetClientFirstName()
@@ -40,7 +40,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 		sqlQuery,
 		clientID,
 		businessServiceID,
-		orderDate,
+		startAt,
 		prePaid,
 		createdAt,
 		clientFirstName,
@@ -61,7 +61,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 			BusinessServiceOrderID: businessServiceOrderID,
 			ClientID:               clientID,
 			BusinessServiceID:      businessServiceID,
-			OrderDate:              orderDate,
+			StartAt:              startAt,
 			CreatedAt:              createdAt,
 			PrePaid:                prePaid,
 			ClientFirstName:		clientFirstName,

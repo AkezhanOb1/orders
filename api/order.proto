@@ -4,18 +4,18 @@ syntax="proto3";
 package businessServiceOrder;
 option go_package=".;order";
 
-
 message BusinessServiceOrder {
     int64 businessServiceOrderID = 1;
     int64 clientID = 2;
     int64 businessServiceID = 3;
-    string orderDate = 4;
-    string createdAt = 5;
-    bool prePaid = 6;
-    string clientFirstName = 7;
-    string clientPhoneNumber = 8;
-    string clientPhoneNumberPrefix = 9;
-    string clientCommentary = 10;
+    string startAt = 4;
+    string endAt = 5;
+    string createdAt = 6;
+    bool prePaid = 7;
+    string clientFirstName = 8;
+    string clientPhoneNumber = 9;
+    string clientPhoneNumberPrefix = 10;
+    string clientCommentary = 11;
 }
 
 message GetBusinessServiceOrderRequest {
@@ -37,7 +37,7 @@ message GetBusinessServiceOrdersResponse {
 message CreateBusinessServiceOrderRequest {
     int64 clientID = 1;
     int64 businessServiceID = 2;
-    string orderDate = 3;
+    string startAt = 3;
     bool prePaid = 4;
     string clientFirstName = 5;
     string clientPhoneNumber = 6;
@@ -48,12 +48,6 @@ message CreateBusinessServiceOrderRequest {
 message CreateBusinessServiceOrderResponse {
     BusinessServiceOrder businessServiceOrder = 1;
 }
-
-
-
-
-
-
 
 service BusinessServiceOrders {
     rpc GetBusinessServiceOrder (GetBusinessServiceOrderRequest) returns (GetBusinessServiceOrderResponse) {}

@@ -19,7 +19,7 @@ func GetBusinessServiceOrderRepository(ctx context.Context, orderID int64) (*pb.
 
 
 	var order pb.BusinessServiceOrder
-	sqlQuery := `SELECT id, client_id, business_service_id, order_date, pre_paid, created_at,
+	sqlQuery := `SELECT id, client_id, business_service_id, start_at, end_at, pre_paid, created_at,
     				  client_first_name, client_phone_number, client_phone_number_prefix, client_commentary
 			     FROM business_company_service_order 
 	             WHERE id=$1;`
@@ -28,7 +28,8 @@ func GetBusinessServiceOrderRepository(ctx context.Context, orderID int64) (*pb.
 		&order.BusinessServiceOrderID,
 		&order.ClientID,
 		&order.BusinessServiceID,
-		&order.OrderDate,
+		&order.StartAt,
+		&order.EndAt,
 		&order.PrePaid,
 		&order.CreatedAt,
 		&order.ClientFirstName,

@@ -1,10 +1,10 @@
 package repositories
 
 import (
+	"context"
 	pb "github.com/AkezhanOb1/orders/api"
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
-	"context"
 )
 
 
@@ -18,8 +18,7 @@ func GetBusinessServiceOrdersRepository(ctx context.Context, businessServiceID i
 
 	defer conn.Close(ctx)
 
-
-	sqlQuery := `SELECT id, client_id, business_service_id, order_date, pre_paid, created_at,
+	sqlQuery := `SELECT id, client_id, business_service_id, start_at, end_at, pre_paid, created_at,
      				client_first_name, client_phone_number, client_phone_number_prefix, client_commentary
 	             FROM business_company_service_order 
 				 WHERE business_service_id=$1`
@@ -38,7 +37,8 @@ func GetBusinessServiceOrdersRepository(ctx context.Context, businessServiceID i
 			&order.BusinessServiceOrderID,
 			&order.ClientID,
 			&order.BusinessServiceID,
-			&order.OrderDate,
+			&order.StartAt,
+			&order.EndAt,
 			&order.PrePaid,
 			&order.CreatedAt,
 			&order.ClientFirstName,
