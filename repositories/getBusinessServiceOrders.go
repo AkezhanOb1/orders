@@ -10,7 +10,7 @@ import (
 
 //GetBusinessServiceOrdersRepository is a repository that responsible to all the requests to DB
 //about business categories
-func GetBusinessServiceOrdersRepository(ctx context.Context) (*pb.GetBusinessServiceOrdersResponse, error) {
+func GetBusinessServiceOrdersRepository(ctx context.Context, businessServiceID int64) (*pb.GetBusinessServiceOrdersResponse, error) {
 	conn, err := pgx.Connect(ctx, config.PostgresConnection)
 	if err != nil {
 		return nil, err
@@ -21,9 +21,10 @@ func GetBusinessServiceOrdersRepository(ctx context.Context) (*pb.GetBusinessSer
 
 	sqlQuery := `SELECT id, client_id, business_service_id, order_date, pre_paid, created_at,
      				client_first_name, client_phone_number, client_phone_number_prefix, client_commentary
-	             FROM business_company_service_order`
+	             FROM business_company_service_order 
+				 WHERE business_service_id=$1`
 
-	rows, err := conn.Query(ctx, sqlQuery)
+	rows, err := conn.Query(ctx, sqlQuery, businessServiceID)
 	if err != nil {
 		return nil, err
 	}

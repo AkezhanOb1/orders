@@ -22,7 +22,7 @@ func GetBusinessServiceOrderRepository(ctx context.Context, orderID int64) (*pb.
 	sqlQuery := `SELECT id, client_id, business_service_id, order_date, pre_paid, created_at,
     				  client_first_name, client_phone_number, client_phone_number_prefix, client_commentary
 			     FROM business_company_service_order 
-	                  WHERE id=$1;`
+	             WHERE id=$1;`
 
 	err = conn.QueryRow(ctx, sqlQuery, orderID).Scan(
 		&order.BusinessServiceOrderID,
