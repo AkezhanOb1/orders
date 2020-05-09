@@ -34,6 +34,15 @@ message GetBusinessServiceOrdersResponse {
     repeated BusinessServiceOrder businessServicesOrders = 1;
 }
 
+message GetBusinessServiceOrderByDateRequest {
+    int64 businessServiceID = 1;
+    string date = 2;
+}
+
+message GetBusinessServiceOrderByDateResponse {
+    repeated BusinessServiceOrder businessServicesOrders = 1;
+}
+
 message CreateBusinessServiceOrderRequest {
     int64 clientID = 1;
     int64 businessServiceID = 2;
@@ -49,9 +58,39 @@ message CreateBusinessServiceOrderResponse {
     BusinessServiceOrder businessServiceOrder = 1;
 }
 
+message GetCompanyServiceInfoByWeekDayRequest {
+    int64 businessServiceID = 1;
+    int64 dayOfWeek = 2;
+}
+
+message GetCompanyServiceInfoByWeekDayResponse {
+    int64 companyServiceID = 1;
+    string companyServiceName = 2;
+    int64 companyServiceDuration = 3;
+    int64 companyServicePrice = 4;
+    int64 dayOfWeek = 5;
+    string openTime = 6;
+    string closeTime = 7;
+}
+
+message GetCompanyAvailableHoursByDateRequest {
+     int64 businessServiceID = 1;
+     string date = 2;
+}
+
+message GetCompanyAvailableHoursByDateResponse {
+    repeated string availableHour = 1;
+}
+
+
+
 service BusinessServiceOrders {
     rpc GetBusinessServiceOrder (GetBusinessServiceOrderRequest) returns (GetBusinessServiceOrderResponse) {}
     rpc GetBusinessServiceOrders (GetBusinessServiceOrdersRequest) returns (GetBusinessServiceOrdersResponse) {}
+    rpc GetBusinessServiceOrderByDate(GetBusinessServiceOrderByDateRequest) returns (GetBusinessServiceOrderByDateResponse) {}
+
+    rpc GetCompanyServiceInfoByWeekDay(GetCompanyServiceInfoByWeekDayRequest) returns (GetCompanyServiceInfoByWeekDayResponse) {}
+    rpc GetCompanyAvailableHoursByDate(GetCompanyAvailableHoursByDateRequest) returns (GetCompanyAvailableHoursByDateResponse) {}
 
     rpc CreateBusinessServiceOrder (CreateBusinessServiceOrderRequest) returns (CreateBusinessServiceOrderResponse) {}
 }

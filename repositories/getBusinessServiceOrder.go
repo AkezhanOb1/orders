@@ -1,11 +1,10 @@
 package repositories
 
 import (
+	"context"
 	pb "github.com/AkezhanOb1/orders/api"
 	config "github.com/AkezhanOb1/orders/configs"
-	"context"
 	"github.com/jackc/pgx/v4"
-
 )
 
 //GetBusinessServiceOrderRepository is a
@@ -40,6 +39,7 @@ func GetBusinessServiceOrderRepository(ctx context.Context, orderID int64) (*pb.
 	if err != nil {
 		return nil, err
 	}
+
 
 	return &pb.GetBusinessServiceOrderResponse{
 		BusinessServiceOrder: &order,
