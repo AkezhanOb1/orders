@@ -18,6 +18,9 @@ const postgresUsername = "postgres"
 //postgresPassword is the password of the user
 const postgresPassword = "postgres"
 
+//MainService is an address of main service
+const MainService = "46.101.138.224:50051"
+
 //PostgresConnection is the connection string to the database
 var PostgresConnection = fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 	postgresAddress, postgresPort, postgresUsername, postgresPassword, postgresDataBase)

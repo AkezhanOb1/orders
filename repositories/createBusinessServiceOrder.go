@@ -5,11 +5,12 @@ import (
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
 	pb "github.com/AkezhanOb1/orders/api"
+	"log"
 	"time"
 )
 
 //CreateBusinessServiceOrderRepository is
-func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.CreateBusinessServiceOrderRequest) (*pb.CreateBusinessServiceOrderResponse, error) {
+func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.CreateBusinessServiceOrderRequest, endAt string) (*pb.CreateBusinessServiceOrderResponse, error) {
 	conn, err := pgx.Connect(ctx, config.PostgresConnection)
 	if err != nil {
 		return nil, err
@@ -18,9 +19,9 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 	defer conn.Close(context.Background())
 
 
-	sqlQuery := `INSERT INTO business_company_service_order (client_id, business_service_id, start_at, pre_paid, created_at, 
+	sqlQuery := `INSERT INTO business_company_service_order (client_id, business_service_id, start_at, end_at, pre_paid, created_at, 
      					client_first_name, client_phone_number, client_phone_number_prefix, client_commentary) 
-				 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) 
+				 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) 
 				 RETURNING id;`
 
 
@@ -41,6 +42,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 		clientID,
 		businessServiceID,
 		startAt,
+		endAt,
 		prePaid,
 		createdAt,
 		clientFirstName,
@@ -52,6 +54,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 
 	err = row.Scan(&businessServiceOrderID)
 	if err != nil {
+		log.Println(err)
 		return nil, err
 	}
 
@@ -61,7 +64,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 			BusinessServiceOrderID: businessServiceOrderID,
 			ClientID:               clientID,
 			BusinessServiceID:      businessServiceID,
-			StartAt:              startAt,
+			StartAt:             	startAt,
 			CreatedAt:              createdAt,
 			PrePaid:                prePaid,
 			ClientFirstName:		clientFirstName,

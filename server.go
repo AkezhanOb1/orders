@@ -25,3 +25,17 @@ func main() {
 		panic(err)
 	}
 }
+//
+//package main
+//
+//import (
+//	"fmt"
+//	"log"
+//	"time"
+//)
+//
+//func main() {
+//	a, _ := time.Parse(time.RFC3339, "2011-10-05T14:48:00.000Z")
+//	fmt.Println(a)
+//	log.Println(a.Year())
+//}

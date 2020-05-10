@@ -4,20 +4,27 @@ import (
 	"context"
 	pb "github.com/AkezhanOb1/orders/api"
 	db "github.com/AkezhanOb1/orders/repositories"
+	"log"
 	"time"
 )
 
 //GetCompanyAvailableHoursByDate is
 func (*BusinessServiceOrder) GetCompanyAvailableHoursByDate(ctx context.Context,  request *pb.GetCompanyAvailableHoursByDateRequest) (*pb.GetCompanyAvailableHoursByDateResponse, error) {
 	//getting the list of orders which were made in the provided date
-	orders, err := db.GetBusinessServiceOrderByDateRepository(ctx, request.BusinessServiceID, request.GetDate())
+
+	date, err := time.Parse("2006-01-02", request.GetDate())
+	if err != nil {
+		return nil, err
+	}
+
+	nextDay := date.Add(time.Hour * 24)
+	orders, err := db.GetBusinessServiceOrderByDateRepository(ctx, request.BusinessServiceID, date.String(), nextDay.String())
 	if err != nil {
 		return nil, err
 	}
 
 	//determining the week day based on date
 	var dayOfWeek int64
-	date, _ := time.Parse("15:04:05", request.GetDate())
 	switch date.Weekday().String() {
 	case "Sunday":
 		dayOfWeek = 0
@@ -42,12 +49,14 @@ func (*BusinessServiceOrder) GetCompanyAvailableHoursByDate(ctx context.Context,
 	}
 
 
-	requestDate, _ := time.Parse("2006-01-02", request.GetDate())
+
+	//requestDate, _ := time.Parse(time.RFC3339, request.GetDate())
+	//log.Println(requestDate)
 	duration := time.Duration(info.GetCompanyServiceDuration())
 	startDate, _ := time.Parse("15:04:05", info.GetOpenTime())
-	startDate = startDate.AddDate(requestDate.Year(),int(requestDate.Month()-1) , requestDate.Day()-1)
+	startDate = startDate.AddDate(date.Year(),int(date.Month()-1) , date.Day()-1)
 	endDate, _ := time.Parse("15:04:05", info.GetCloseTime())
-	endDate = endDate.AddDate(requestDate.Year(),int(requestDate.Month()-1) , requestDate.Day()-1)
+	endDate = endDate.AddDate(date.Year(),int(date.Month()-1) , date.Day()-1)
 
 	//determining all possible order hours
 	var workTime []time.Time
@@ -58,7 +67,9 @@ func (*BusinessServiceOrder) GetCompanyAvailableHoursByDate(ctx context.Context,
 
 	//removing from possible hours already booked hours
 	for i := range orders.BusinessServicesOrders {
-		orderDate, _ := time.Parse("2006-01-02T15:04:05", orders.BusinessServicesOrders[i].StartAt)
+		log.Println(orders.BusinessServicesOrders[i].StartAt)
+		orderDate, _ := time.Parse(time.RFC3339, orders.BusinessServicesOrders[i].StartAt)
+
 		for j := range workTime {
 			if orderDate.Equal(workTime[j]) {
 				workTime = append(workTime[:j], workTime[j+1:]...)

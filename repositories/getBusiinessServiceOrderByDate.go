@@ -10,7 +10,7 @@ import (
 
 //GetBusinessServiceOrderByDateRepository is a repository that responsible to all the requests to DB
 //about business categories
-func GetBusinessServiceOrderByDateRepository(ctx context.Context, businessServiceID int64, date string) (*pb.GetBusinessServiceOrderByDateResponse, error) {
+func GetBusinessServiceOrderByDateRepository(ctx context.Context, businessServiceID int64, today string, nextDay string) (*pb.GetBusinessServiceOrderByDateResponse, error) {
 	conn, err := pgx.Connect(ctx, config.PostgresConnection)
 	if err != nil {
 		return nil, err
@@ -18,13 +18,21 @@ func GetBusinessServiceOrderByDateRepository(ctx context.Context, businessServic
 
 	defer conn.Close(ctx)
 
+
 	sqlQuery := `SELECT id, client_id, business_service_id, start_at, end_at, 
 					pre_paid, created_at,client_first_name, client_phone_number, 
 					client_phone_number_prefix, client_commentary
 	             FROM business_company_service_order 
-				 WHERE business_service_id=$1 AND start_at::timestamp::date=$2`
+				 WHERE business_service_id=$1 
+				 AND start_at>$2 AND start_at<$3`
 
-	rows, err := conn.Query(ctx, sqlQuery, businessServiceID, date)
+	rows, err := conn.Query(
+		ctx,
+		sqlQuery,
+		businessServiceID,
+		today,
+		nextDay)
+
 	if err != nil {
 		return nil, err
 	}
@@ -54,7 +62,6 @@ func GetBusinessServiceOrderByDateRepository(ctx context.Context, businessServic
 
 		orders.BusinessServicesOrders = append(orders.BusinessServicesOrders, &order)
 	}
-
 
 	return &orders, nil
 }
