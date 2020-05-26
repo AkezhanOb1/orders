@@ -8,10 +8,8 @@ import (
 	"time"
 )
 
-type BusinessServiceOrder struct {}
-
-//CreateBusinessServiceOrder is
-func (*BusinessServiceOrder) CreateBusinessServiceOrder(ctx context.Context, request *pb.CreateBusinessServiceOrderRequest) (*pb.CreateBusinessServiceOrderResponse, error) {
+//UpdateBusinessServiceOrder is
+func (*BusinessServiceOrder) UpdateBusinessServiceOrder(ctx context.Context,  request *pb.UpdateBusinessServiceOrderRequest) (*pb.UpdateBusinessServiceOrderResponse, error) {
 	service, err := client.GetCompanyServiceInfo(request.GetBusinessServiceID())
 	if err != nil {
 		return nil, err
@@ -25,7 +23,7 @@ func (*BusinessServiceOrder) CreateBusinessServiceOrder(ctx context.Context, req
 	endAt := (startAt.Add(time.Minute * duration)).Format(time.RFC3339)
 	request.StartAt = startAt.Format(time.RFC3339)
 
-	order, err := db.CreateBusinessServiceOrderRepository(ctx, request, endAt)
+	order, err := db.UpdateBusinessServiceOrderRepository(ctx, request, endAt)
 	if err != nil {
 		return nil, err
 	}

@@ -1,9 +1,10 @@
-
 package repositories
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api"
+	pb "github.com/AkezhanOb1/orders/api/orders"
+	"log"
+
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
 )
@@ -17,14 +18,14 @@ func GetCompanyServiceInfoByWeekDayRepository(ctx context.Context, serviceID int
 
 	defer conn.Close(context.Background())
 
+	log.Println(serviceID)
+	log.Println(dayOfWeek)
 
 	sqlQuery := `SELECT bs.id, bs.name, bs.duration, bs.price, op.day_of_week, op.open_time, op.close_time
 				 FROM business_company_service bs
 	             INNER JOIN business_company_service_operation_hours op
 					ON bs.id = op.business_service_id
 	             WHERE  bs.id=$1 AND op.day_of_week=$2;`
-
-
 
 	var info pb.GetCompanyServiceInfoByWeekDayResponse
 	row := conn.QueryRow(
@@ -33,7 +34,6 @@ func GetCompanyServiceInfoByWeekDayRepository(ctx context.Context, serviceID int
 		serviceID,
 		dayOfWeek,
 	)
-
 
 	err = row.Scan(
 		&info.CompanyServiceID,
@@ -48,7 +48,5 @@ func GetCompanyServiceInfoByWeekDayRepository(ctx context.Context, serviceID int
 		return nil, err
 	}
 
-
 	return &info, nil
 }
-

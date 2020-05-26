@@ -2,7 +2,7 @@ package services
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api"
+	pb "github.com/AkezhanOb1/orders/api/orders"
 	db "github.com/AkezhanOb1/orders/repositories"
 	"time"
 )

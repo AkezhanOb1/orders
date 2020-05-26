@@ -1,9 +1,9 @@
 package services
 
 import (
-	pb "github.com/AkezhanOb1/orders/api"
-	db "github.com/AkezhanOb1/orders/repositories"
 	"context"
+	pb "github.com/AkezhanOb1/orders/api/orders"
+	db "github.com/AkezhanOb1/orders/repositories"
 )
 
 //GetBusinessServiceOrder is

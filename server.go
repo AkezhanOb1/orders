@@ -1,13 +1,12 @@
 package main
 
 import (
+	pb "github.com/AkezhanOb1/orders/api/orders"
+	"google.golang.org/grpc"
 	"log"
 	"net"
-	"google.golang.org/grpc"
 
 	"github.com/AkezhanOb1/orders/services"
-	pb "github.com/AkezhanOb1/orders/api"
-
 )
 
 func main() {

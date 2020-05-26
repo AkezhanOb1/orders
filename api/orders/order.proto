@@ -8,14 +8,15 @@ message BusinessServiceOrder {
     int64 businessServiceOrderID = 1;
     int64 clientID = 2;
     int64 businessServiceID = 3;
-    string startAt = 4;
-    string endAt = 5;
-    string createdAt = 6;
-    bool prePaid = 7;
-    string clientFirstName = 8;
-    string clientPhoneNumber = 9;
-    string clientPhoneNumberPrefix = 10;
-    string clientCommentary = 11;
+    string businessServiceName = 4;
+    string startAt = 5;
+    string endAt = 6;
+    string createdAt = 7;
+    bool prePaid = 8;
+    string clientFirstName = 9;
+    string clientPhoneNumber = 10;
+    string clientPhoneNumberPrefix = 11;
+    string clientCommentary = 12;
 }
 
 message GetBusinessServiceOrderRequest {
@@ -82,15 +83,56 @@ message GetCompanyAvailableHoursByDateResponse {
     repeated string availableHour = 1;
 }
 
+message UpdateBusinessServiceOrderRequest {
+    int64 orderID = 1;
+    int64 businessServiceID = 2;
+    string startAt = 3;
+    bool prePaid = 4;
+    string clientFirstName = 5;
+    string clientPhoneNumber = 6;
+    string clientPhoneNumberPrefix = 7;
+    string clientCommentary = 8;
+}
 
+message UpdateBusinessServiceOrderResponse {
+    BusinessServiceOrder businessServiceOrder = 1;
+}
+
+message DeleteBusinessServiceOrderRequest {
+    int64 orderID = 1;
+}
+
+message DeleteBusinessServiceOrderResponse {
+    BusinessServiceOrder businessServiceOrder = 1;
+}
+
+message Pagination {
+    int64 limit = 1;
+    int64 offset = 2;
+    int64 count = 3;
+}
+
+message GetBusinessServiceOrdersByEmailRequest {
+    string email = 1;
+    Pagination pagination = 2;
+}
+
+message GetBusinessServiceOrdersByEmailResponse{
+    repeated BusinessServiceOrder businessServicesOrders = 1;
+    Pagination pagination = 2;
+}
 
 service BusinessServiceOrders {
     rpc GetBusinessServiceOrder (GetBusinessServiceOrderRequest) returns (GetBusinessServiceOrderResponse) {}
     rpc GetBusinessServiceOrders (GetBusinessServiceOrdersRequest) returns (GetBusinessServiceOrdersResponse) {}
     rpc GetBusinessServiceOrderByDate(GetBusinessServiceOrderByDateRequest) returns (GetBusinessServiceOrderByDateResponse) {}
+    rpc GetBusinessServiceOrdersByEmail (GetBusinessServiceOrdersByEmailRequest) returns (GetBusinessServiceOrdersByEmailResponse) {}
 
     rpc GetCompanyServiceInfoByWeekDay(GetCompanyServiceInfoByWeekDayRequest) returns (GetCompanyServiceInfoByWeekDayResponse) {}
     rpc GetCompanyAvailableHoursByDate(GetCompanyAvailableHoursByDateRequest) returns (GetCompanyAvailableHoursByDateResponse) {}
 
     rpc CreateBusinessServiceOrder (CreateBusinessServiceOrderRequest) returns (CreateBusinessServiceOrderResponse) {}
+    rpc UpdateBusinessServiceOrder (UpdateBusinessServiceOrderRequest) returns (UpdateBusinessServiceOrderResponse) {}
+    rpc DeleteBusinessServiceOrder (DeleteBusinessServiceOrderRequest) returns (DeleteBusinessServiceOrderResponse) {}
+
 }

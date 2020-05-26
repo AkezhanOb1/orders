@@ -2,7 +2,7 @@ package services
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api"
+	pb "github.com/AkezhanOb1/orders/api/orders"
 	db "github.com/AkezhanOb1/orders/repositories"
 	"log"
 	"time"
@@ -10,13 +10,13 @@ import (
 
 //GetCompanyAvailableHoursByDate is
 func (*BusinessServiceOrder) GetCompanyAvailableHoursByDate(ctx context.Context,  request *pb.GetCompanyAvailableHoursByDateRequest) (*pb.GetCompanyAvailableHoursByDateResponse, error) {
-	//getting the list of orders which were made in the provided date
 
 	date, err := time.Parse("2006-01-02", request.GetDate())
 	if err != nil {
 		return nil, err
 	}
 
+	//getting the list of orders which were made in the provided date
 	nextDay := date.Add(time.Hour * 24)
 	orders, err := db.GetBusinessServiceOrderByDateRepository(ctx, request.BusinessServiceID, date.String(), nextDay.String())
 	if err != nil {
