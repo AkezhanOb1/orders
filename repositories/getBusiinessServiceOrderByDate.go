@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
 )
@@ -24,7 +24,7 @@ func GetBusinessServiceOrderByDateRepository(ctx context.Context, businessServic
 					client_phone_number_prefix, client_commentary
 	             FROM business_company_service_order 
 				 WHERE business_service_id=$1 
-				 AND start_at>$2 AND start_at<$3`
+				 AND start_at>$2 AND start_at<$3 ORDER BY id`
 
 	rows, err := conn.Query(
 		ctx,

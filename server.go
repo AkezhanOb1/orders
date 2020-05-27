@@ -1,7 +1,7 @@
 package main
 
 import (
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	"google.golang.org/grpc"
 	"log"
 	"net"
@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	address := "0.0.0.0:50053"
+	var address = "0.0.0.0:50053"
 	lis, err := net.Listen("tcp", address)
 	if err != nil {
 		log.Fatalf("Error %v", err)

@@ -2,7 +2,7 @@ package client
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	"google.golang.org/grpc"
 	"log"
 )

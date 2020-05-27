@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
 )
@@ -21,7 +21,7 @@ func GetBusinessServiceOrderRepository(ctx context.Context, orderID int64) (*pb.
 	sqlQuery := `SELECT id, client_id, business_service_id, start_at, end_at, pre_paid, created_at,
     				  client_first_name, client_phone_number, client_phone_number_prefix, client_commentary
 			     FROM business_company_service_order 
-	             WHERE id=$1;`
+	             WHERE id=$1 ORDER BY id;`
 
 	err = conn.QueryRow(ctx, sqlQuery, orderID).Scan(
 		&order.BusinessServiceOrderID,

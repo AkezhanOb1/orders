@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
 	"log"

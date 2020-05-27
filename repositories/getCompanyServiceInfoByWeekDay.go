@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	"log"
 
 	config "github.com/AkezhanOb1/orders/configs"
@@ -25,7 +25,7 @@ func GetCompanyServiceInfoByWeekDayRepository(ctx context.Context, serviceID int
 				 FROM business_company_service bs
 	             INNER JOIN business_company_service_operation_hours op
 					ON bs.id = op.business_service_id
-	             WHERE  bs.id=$1 AND op.day_of_week=$2;`
+	             WHERE  bs.id=$1 AND op.day_of_week=$2 ORDER BY bs.id;`
 
 	var info pb.GetCompanyServiceInfoByWeekDayResponse
 	row := conn.QueryRow(

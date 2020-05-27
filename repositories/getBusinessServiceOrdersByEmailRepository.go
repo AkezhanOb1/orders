@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	pb "github.com/AkezhanOb1/orders/api/orders"
+	pb "github.com/AkezhanOb1/orders/api/order"
 	config "github.com/AkezhanOb1/orders/configs"
 	"github.com/jackc/pgx/v4"
 )
@@ -36,7 +36,7 @@ func GetBusinessServiceOrdersByEmailRepository(ctx context.Context, request *pb.
 					   bc.client_first_name, bc.client_phone_number, bc.client_phone_number_prefix,
 					   bc.client_commentary, bc.end_at, bc.business_service_id
 				FROM business_company_service_order bc inner join business_company_service b
-				on bc.business_service_id = b.id WHERE bc.client_id = $1
+				on bc.business_service_id = b.id WHERE bc.client_id = $1 ORDER BY bc.id
 				OFFSET $2 LIMIT $3;`
 
 	rows, err := conn.Query(ctx, sqlQuery, clientID, offset, limit)
