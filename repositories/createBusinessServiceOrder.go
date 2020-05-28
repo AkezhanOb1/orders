@@ -65,6 +65,7 @@ func CreateBusinessServiceOrderRepository(ctx context.Context, request *pb.Creat
 			ClientID:               clientID,
 			BusinessServiceID:      businessServiceID,
 			StartAt:             	startAt,
+			EndAt:					endAt,
 			CreatedAt:              createdAt,
 			PrePaid:                prePaid,
 			ClientFirstName:		clientFirstName,
