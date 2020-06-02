@@ -8,15 +8,17 @@ message BusinessServiceOrder {
     int64 businessServiceOrderID = 1;
     int64 clientID = 2;
     int64 businessServiceID = 3;
-    string businessServiceName = 4;
-    string startAt = 5;
-    string endAt = 6;
-    string createdAt = 7;
-    bool prePaid = 8;
-    string clientFirstName = 9;
-    string clientPhoneNumber = 10;
-    string clientPhoneNumberPrefix = 11;
-    string clientCommentary = 12;
+    string businessCompanyName = 4;
+    string businessServiceName = 5;
+    double price = 6;
+    string startAt = 7;
+    string endAt = 8;
+    string createdAt = 9;
+    bool prePaid = 10;
+    string clientFirstName = 11;
+    string clientPhoneNumber = 12;
+    string clientPhoneNumberPrefix = 13;
+    string clientCommentary = 14;
 }
 
 message GetBusinessServiceOrderRequest {
