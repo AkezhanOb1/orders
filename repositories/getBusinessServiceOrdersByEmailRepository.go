@@ -18,9 +18,10 @@ func GetBusinessServiceOrdersByEmailRepository(ctx context.Context, request *pb.
 
 	defer conn.Close(ctx)
 
-	sqlQuery := `SELECT COUNT(1) from business_company_service_order;`
+	sqlQuery := `SELECT COUNT(1) from business_company_service_order 
+				 WHERE client_id = $1;`
 
-	err = conn.QueryRow(context.Background(), sqlQuery).Scan(
+	err = conn.QueryRow(context.Background(), sqlQuery, clientID).Scan(
 		&request.Pagination.Count,
 	)
 	if err != nil {
